@@ -52,10 +52,5 @@ After some tough data wrangling, I got 4 tables:
 
 ## Querying Data
 
-| pokedex_number | name | total | Gen |
-| -------------- | ---- | ----- | --- |
-| 746 | Wishiwashi | 175 | VII |
-| 890 | Eternatus Eternamax | 1125 | VIII|
-
 
 
