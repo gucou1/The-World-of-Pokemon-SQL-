@@ -1,0 +1,1449 @@
+pokedex_number,name,color
+1,Bulbasaur,Green
+2,Ivysaur,Green
+3,Mega Venusaur,Green
+3,Venusaur,Green
+3,Venusaur,Green
+4,Charmander,Red
+5,Charmeleon,Red
+6,Charizard,Red
+6,Mega Charizard X,Black
+6,Mega Charizard Y,Red
+6,Charizard,Red
+6,Charizard,Red
+7,Squirtle,Blue
+8,Wartortle,Blue
+9,Blastoise,Blue
+9,Blastoise,Blue
+9,Mega Blastoise,Blue
+10,Caterpie,Green
+11,Metapod,Green
+12,Butterfree,White
+13,Weedle,Brown
+14,Kakuna,Yellow
+15,Beedrill,Yellow
+15,Beedrill,Yellow
+15,Mega Beedrill,Yellow
+16,Pidgey,Brown
+17,Pidgeotto,Brown
+18,Pidgeot,Brown
+18,Mega Pidgeot,Brown
+18,Pidgeot,Brown
+19,Rattata,Purple
+19,Rattata,Purple
+19,Alolan Rattata,Black
+20,Alolan Raticate,Black
+20,Raticate,Brown
+20,Raticate,Brown
+21,Spearow,Brown
+22,Fearow,Brown
+23,Ekans,Purple
+24,Arbok,Purple
+25,Pikachu,Yellow
+25,Pikachu,Yellow
+25,Partner Pikachu,Yellow
+26,Alolan Raichu,Brown
+26,Raichu,Yellow
+26,Raichu,Yellow
+27,Sandshrew,Yellow
+27,Alolan Sandshrew,White
+27,Sandshrew,Yellow
+28,Sandslash,Yellow
+28,Sandslash,Yellow
+28,Alolan Sandslash,Blue
+29,Nidoran Female,Blue
+30,Nidorina,Blue
+31,Nidoqueen,Blue
+32,Nidoran Male,Purple
+33,Nidorino,Purple
+34,Nidoking,Purple
+35,Clefairy,Pink
+36,Clefable,Pink
+37,Vulpix,Brown
+37,Vulpix,Brown
+37,Alolan Vulpix,White
+38,Ninetales,Yellow
+38,Ninetales,Yellow
+38,Alolan Ninetales,Blue
+39,Jigglypuff,Pink
+40,Wigglytuff,Pink
+41,Zubat,Purple
+42,Golbat,Purple
+43,Oddish,Blue
+44,Gloom,Blue
+45,Vileplume,Red
+46,Paras,Red
+47,Parasect,Red
+48,Venonat,Purple
+49,Venomoth,Purple
+50,Alolan Diglett,Brown
+50,Diglett,Brown
+50,Diglett,Brown
+51,Alolan Dugtrio,Brown
+51,Dugtrio,Brown
+51,Dugtrio,Brown
+52,Meowth,Yellow
+52,Alolan Meowth,Blue
+52,Meowth,Yellow
+52,Meowth,Yellow
+52,Galarian Meowth,Brown
+53,Persian,Yellow
+53,Persian,Yellow
+53,Alolan Persian,Blue
+54,Psyduck,Yellow
+55,Golduck,Blue
+56,Mankey,Brown
+57,Primeape,Brown
+58,Hisuian Growlithe,Brown
+58,Growlithe,Brown
+58,Growlithe,Brown
+59,Arcanine,Brown
+59,Arcanine,Brown
+59,Hisuian Arcanine,Brown
+60,Poliwag,Blue
+61,Poliwhirl,Blue
+62,Poliwrath,Blue
+63,Abra,Brown
+64,Kadabra,Brown
+65,Alakazam,Brown
+65,Mega Alakazam,Brown
+65,Alakazam,Brown
+66,Machop,Gray
+67,Machoke,Gray
+68,Machamp,Gray
+69,Bellsprout,Green
+70,Weepinbell,Green
+71,Victreebel,Green
+72,Tentacool,Blue
+73,Tentacruel,Blue
+74,Geodude,Brown
+74,Alolan Geodude,Gray
+74,Geodude,Brown
+75,Graveler,Brown
+75,Alolan Graveler,Gray
+75,Graveler,Brown
+76,Golem,Brown
+76,Alolan Golem,Gray
+76,Golem,Brown
+77,Ponyta,Yellow
+77,Galarian Ponyta,White
+77,Ponyta,Yellow
+78,Galarian Rapidash,White
+78,Rapidash,Yellow
+78,Rapidash,Yellow
+79,Slowpoke,Pink
+79,Galarian Slowpoke,Pink
+79,Slowpoke,Pink
+80,Slowbro,Pink
+80,Slowbro,Pink
+80,Mega Slowbro,Pink
+80,Slowbro,Pink
+80,Galarian Slowbro,Pink
+81,Magnemite,Gray
+82,Magneton,Gray
+83,Farfetch'd,Brown
+83,Galarian Farfetch'd,Brown
+83,Farfetch'd,Brown
+84,Doduo,Brown
+85,Dodrio,Brown
+86,Seel,White
+87,Dewgong,White
+88,Grimer,Purple
+88,Grimer,Purple
+88,Alolan Grimer,Green
+89,Alolan Muk,Green
+89,Muk,Purple
+89,Muk,Purple
+90,Shellder,Purple
+91,Cloyster,Purple
+92,Gastly,Purple
+93,Haunter,Purple
+94,Mega Gengar,Purple
+94,Gengar,Purple
+94,Gengar,Purple
+95,Onix,Gray
+96,Drowzee,Yellow
+97,Hypno,Yellow
+98,Krabby,Red
+99,Kingler,Red
+100,Hisuian Voltorb,Red
+100,Voltorb,Red
+100,Hisuian Voltorb,Red
+100,Voltorb,Red
+101,Electrode,Red
+101,Hisuian Electrode,Red
+101,Electrode,Red
+101,Hisuian Electrode,Red
+102,Exeggcute,Pink
+103,Exeggutor,Yellow
+103,Exeggutor,Yellow
+103,Alolan Exeggutor,Yellow
+104,Cubone,Brown
+105,Marowak,Brown
+105,Alolan Marowak,Purple
+105,Marowak,Brown
+106,Hitmonlee,Brown
+107,Hitmonchan,Brown
+108,Lickitung,Pink
+109,Koffing,Purple
+110,Weezing,Purple
+110,Galarian Weezing,Gray
+110,Weezing,Purple
+111,Rhyhorn,Gray
+112,Rhydon,Gray
+113,Chansey,Pink
+114,Tangela,Blue
+115,Mega Kangaskhan,Brown
+115,Kangaskhan,Brown
+115,Kangaskhan,Brown
+116,Horsea,Blue
+117,Seadra,Blue
+118,Goldeen,Red
+119,Seaking,Red
+120,Staryu,Brown
+121,Starmie,Purple
+122,Mr. Mime,Pink
+122,Mr. Mime,Pink
+122,Galarian Mr. Mime,White
+123,Scyther,Green
+124,Jynx,Red
+125,Electabuzz,Yellow
+126,Magmar,Red
+127,Pinsir,Brown
+127,Pinsir,Brown
+127,Mega Pinsir,Brown
+128,Tauros,Brown
+128,Tauros,Brown
+128,Tauros Combat Breed,Brown
+128,Tauros,Brown
+128,Tauros Aqua Breed,Brown
+128,Tauros Blaze Breed,Brown
+128,Tauros,Brown
+129,Magikarp,Red
+130,Gyarados,Blue
+130,Gyarados,Blue
+130,Mega Gyarados,Blue
+131,Lapras,Blue
+132,Ditto,Purple
+133,Eevee,Brown
+133,Eevee,Brown
+133,Partner Eevee,Brown
+134,Vaporeon,Blue
+135,Jolteon,Yellow
+136,Flareon,Red
+137,Porygon,Pink
+138,Omanyte,Blue
+139,Omastar,Blue
+140,Kabuto,Brown
+141,Kabutops,Brown
+142,Mega Aerodactyl,Purple
+142,Aerodactyl,Purple
+142,Aerodactyl,Purple
+143,Snorlax,Black
+144,Galarian Articuno,Purple
+144,Articuno,Blue
+144,Articuno,Blue
+145,Zapdos,Yellow
+145,Galarian Zapdos,Yellow
+145,Zapdos,Yellow
+146,Moltres,Yellow
+146,Moltres,Yellow
+146,Galarian Moltres,Red
+147,Dratini,Blue
+148,Dragonair,Blue
+149,Dragonite,Brown
+150,Mewtwo,Purple
+150,Mewtwo,Purple
+150,Mega Mewtwo Y,Purple
+150,Mega Mewtwo X,Purple
+150,Mewtwo,Purple
+151,Mew,Pink
+152,Chikorita,Green
+153,Bayleef,Green
+154,Meganium,Green
+155,Cyndaquil,Yellow
+156,Quilava,Yellow
+157,Typhlosion,Yellow
+157,Hisuian Typhlosion,Yellow
+157,Typhlosion,Yellow
+158,Totodile,Blue
+159,Croconaw,Blue
+160,Feraligatr,Blue
+161,Sentret,Brown
+162,Furret,Brown
+163,Hoothoot,Brown
+164,Noctowl,Brown
+165,Ledyba,Red
+166,Ledian,Red
+167,Spinarak,Green
+168,Ariados,Red
+169,Crobat,Purple
+170,Chinchou,Blue
+171,Lanturn,Blue
+172,Pichu,Yellow
+173,Cleffa,Pink
+174,Igglybuff,Pink
+175,Togepi,White
+176,Togetic,White
+177,Natu,Green
+178,Xatu,Green
+179,Mareep,White
+180,Flaaffy,Pink
+181,Mega Ampharos,Yellow
+181,Ampharos,Yellow
+181,Ampharos,Yellow
+182,Bellossom,Green
+183,Marill,Blue
+184,Azumarill,Blue
+185,Sudowoodo,Brown
+186,Politoed,Green
+187,Hoppip,Pink
+188,Skiploom,Green
+189,Jumpluff,Blue
+190,Aipom,Purple
+191,Sunkern,Yellow
+192,Sunflora,Yellow
+193,Yanma,Red
+194,Wooper,Blue
+194,Paldean Wooper,Blue
+194,Wooper,Blue
+195,Quagsire,Blue
+196,Espeon,Purple
+197,Umbreon,Black
+198,Murkrow,Black
+199,Slowking,Pink
+199,Galarian Slowking,Pink
+199,Slowking,Pink
+200,Misdreavus,Gray
+201,Unown,Black
+202,Wobbuffet,Blue
+203,Girafarig,Yellow
+204,Pineco,Gray
+205,Forretress,Purple
+206,Dunsparce,Yellow
+207,Gligar,Purple
+208,Steelix,Gray
+208,Mega Steelix,Gray
+208,Steelix,Gray
+209,Snubbull,Pink
+210,Granbull,Purple
+211,Qwilfish,Gray
+211,Hisuian Qwilfish,Black
+211,Qwilfish,Gray
+212,Scizor,Red
+212,Scizor,Red
+212,Mega Scizor,Red
+212,Mega Scizor,Red
+213,Shuckle,Yellow
+214,Mega Heracross,Blue
+214,Heracross,Blue
+214,Heracross,Blue
+215,Hisuian Sneasel,Gray
+215,Sneasel,Black
+215,Sneasel,Black
+216,Teddiursa,Brown
+217,Ursaring,Brown
+218,Slugma,Red
+219,Magcargo,Red
+220,Swinub,Brown
+221,Piloswine,Brown
+222,Corsola,Pink
+222,Corsola,Pink
+222,Galarian Corsola,White
+223,Remoraid,Gray
+224,Octillery,Red
+225,Delibird,Red
+226,Mantine,Purple
+227,Skarmory,Gray
+228,Houndour,Black
+229,Houndoom,Black
+229,Mega Houndoom,Black
+229,Houndoom,Black
+230,Kingdra,Blue
+231,Phanpy,Blue
+232,Donphan,Gray
+233,Porygon2,Red
+234,Stantler,Brown
+235,Smeargle,White
+236,Tyrogue,Purple
+237,Hitmontop,Brown
+238,Smoochum,Pink
+239,Elekid,Yellow
+240,Magby,Red
+241,Miltank,Pink
+242,Blissey,Pink
+243,Raikou,Yellow
+244,Entei,Brown
+245,Suicune,Blue
+246,Larvitar,Green
+247,Pupitar,Gray
+248,Mega Tyranitar,Green
+248,Tyranitar,Green
+248,Tyranitar,Green
+249,Lugia,White
+250,Ho-Oh,Red
+251,Celebi,Green
+252,Treecko,Green
+253,Grovyle,Green
+254,Mega Sceptile,Green
+254,Sceptile,Green
+254,Sceptile,Green
+255,Torchic,Red
+256,Combusken,Red
+257,Blaziken,Red
+257,Blaziken,Red
+257,Mega Blaziken,Red
+257,Mega Blaziken,Red
+258,Mudkip,Blue
+259,Marshtomp,Blue
+260,Mega Swampert,Blue
+260,Swampert,Blue
+260,Swampert,Blue
+261,Poochyena,Gray
+262,Mightyena,Gray
+263,Zigzagoon,Brown
+263,Galarian Zigzagoon,White
+263,Zigzagoon,Brown
+264,Linoone,White
+264,Linoone,White
+264,Galarian Linoone,White
+265,Wurmple,Red
+266,Silcoon,White
+267,Beautifly,Yellow
+268,Cascoon,Purple
+269,Dustox,Green
+270,Lotad,Green
+271,Lombre,Green
+272,Ludicolo,Green
+273,Seedot,Brown
+274,Nuzleaf,Brown
+275,Shiftry,Brown
+276,Taillow,Blue
+277,Swellow,Blue
+278,Wingull,White
+279,Pelipper,Yellow
+280,Ralts,White
+281,Kirlia,White
+282,Gardevoir,White
+282,Gardevoir,White
+282,Mega Gardevoir,White
+283,Surskit,Blue
+284,Masquerain,Blue
+285,Shroomish,Brown
+286,Breloom,Green
+287,Slakoth,Brown
+288,Vigoroth,White
+289,Slaking,Brown
+290,Nincada,Gray
+291,Ninjask,Yellow
+292,Shedinja,Brown
+293,Whismur,Pink
+294,Loudred,Blue
+295,Exploud,Blue
+296,Makuhita,Yellow
+297,Hariyama,Brown
+298,Azurill,Blue
+299,Nosepass,Gray
+300,Skitty,Pink
+301,Delcatty,Purple
+302,Sableye,Purple
+302,Sableye,Purple
+302,Mega Sableye,Purple
+303,Mawile,Black
+303,Mega Mawile,Black
+303,Mawile,Black
+304,Aron,Gray
+305,Lairon,Gray
+306,Aggron,Gray
+306,Aggron,Gray
+306,Mega Aggron,Gray
+307,Meditite,Blue
+308,Mega Medicham,Red
+308,Mega Medicham,Red
+308,Medicham,Red
+308,Medicham,Red
+309,Electrike,Green
+310,Manectric,Yellow
+310,Manectric,Yellow
+310,Mega Manectric,Yellow
+311,Plusle,Yellow
+312,Minun,Yellow
+313,Volbeat,Gray
+314,Illumise,Purple
+315,Roselia,Green
+316,Gulpin,Green
+317,Swalot,Purple
+318,Carvanha,Red
+319,Sharpedo,Blue
+319,Mega Sharpedo,Blue
+319,Sharpedo,Blue
+320,Wailmer,Blue
+321,Wailord,Blue
+322,Numel,Yellow
+323,Mega Camerupt,Red
+323,Camerupt,Red
+323,Camerupt,Red
+323,Mega Camerupt,Red
+324,Torkoal,Brown
+325,Spoink,Black
+326,Grumpig,Purple
+327,Spinda,Brown
+328,Trapinch,Brown
+329,Vibrava,Green
+330,Flygon,Green
+331,Cacnea,Green
+332,Cacturne,Green
+333,Swablu,Blue
+334,Altaria,Blue
+334,Altaria,Blue
+334,Mega Altaria,Blue
+335,Zangoose,White
+336,Seviper,Black
+337,Lunatone,Yellow
+338,Solrock,Red
+339,Barboach,Gray
+340,Whiscash,Blue
+341,Corphish,Red
+342,Crawdaunt,Red
+343,Baltoy,Brown
+344,Claydol,Black
+345,Lileep,Purple
+346,Cradily,Green
+347,Anorith,Gray
+348,Armaldo,Gray
+349,Feebas,Brown
+350,Milotic,Pink
+351,Castform,Gray
+351,Castform,Gray
+351,Castform,Gray
+351,Castform,Gray
+351,Castform Sunny Form,Red
+351,Castform Rainy Form,Blue
+351,Castform Snowy Form,White
+352,Kecleon,Green
+353,Shuppet,Black
+354,Banette,Black
+354,Banette,Black
+354,Mega Banette,Black
+355,Duskull,Black
+356,Dusclops,Black
+357,Tropius,Green
+358,Chimecho,Blue
+359,Absol,White
+359,Absol,White
+359,Mega Absol,White
+360,Wynaut,Blue
+361,Snorunt,Gray
+362,Glalie,Gray
+362,Glalie,Gray
+362,Mega Glalie,Gray
+363,Spheal,Blue
+364,Sealeo,Blue
+365,Walrein,Blue
+366,Clamperl,Blue
+367,Huntail,Blue
+368,Gorebyss,Pink
+369,Relicanth,Gray
+370,Luvdisc,Pink
+371,Bagon,Blue
+372,Shelgon,White
+373,Mega Salamence,Blue
+373,Salamence,Blue
+373,Salamence,Blue
+374,Beldum,Blue
+375,Metang,Blue
+376,Metagross,Blue
+376,Mega Metagross,Blue
+376,Metagross,Blue
+377,Regirock,Brown
+378,Regice,Blue
+379,Registeel,Gray
+380,Latias,Red
+380,Mega Latias,Purple
+380,Latias,Red
+381,Latios,Blue
+381,Mega Latios,Purple
+381,Latios,Blue
+382,Primal Kyogre,Blue
+382,Kyogre,Blue
+382,Kyogre,Blue
+383,Groudon,Red
+383,Groudon,Red
+383,Primal Groudon,Red
+383,Primal Groudon,Red
+384,Mega Rayquaza,Green
+384,Rayquaza,Green
+384,Rayquaza,Green
+385,Jirachi,Yellow
+386,Deoxys Defense Form,Red
+386,Deoxys Attack Form,Red
+386,Deoxys Attack Form,Red
+386,Deoxys Normal Form,Red
+386,Deoxys Defense Form,Red
+386,Deoxys Normal Form,Red
+386,Deoxys Speed Form,Red
+386,Deoxys Speed Form,Red
+387,Turtwig,Green
+388,Grotle,Green
+389,Torterra,Green
+390,Chimchar,Brown
+391,Monferno,Brown
+392,Infernape,Brown
+393,Piplup,Blue
+394,Prinplup,Blue
+395,Empoleon,Blue
+396,Starly,Brown
+397,Staravia,Brown
+398,Staraptor,Brown
+399,Bidoof,Brown
+400,Bibarel,Brown
+401,Kricketot,Red
+402,Kricketune,Red
+403,Shinx,Blue
+404,Luxio,Blue
+405,Luxray,Blue
+406,Budew,Green
+407,Roserade,Green
+408,Cranidos,Blue
+409,Rampardos,Blue
+410,Shieldon,Gray
+411,Bastiodon,Gray
+412,Burmy Trash Cloak,Red
+412,Burmy Plant Cloak,Green
+412,Burmy Sandy Cloak,Brown
+413,Wormadam Plant Cloak,Green
+413,Wormadam Trash Cloak,Red
+413,Wormadam Sandy Cloak,Brown
+414,Mothim,Yellow
+415,Combee,Yellow
+416,Vespiquen,Yellow
+417,Pachirisu,White
+418,Buizel,Brown
+419,Floatzel,Brown
+420,Cherubi,Pink
+421,Cherrim Sunshine Form,Pink
+421,Cherrim,Purple
+421,Cherrim,Purple
+422,Shellos East Sea,Blue
+422,Shellos West Sea,Purple
+423,Gastrodon West Sea,Purple
+423,Gastrodon East Sea,Blue
+424,Ambipom,Purple
+425,Drifloon,Purple
+426,Drifblim,Purple
+427,Buneary,Brown
+428,Lopunny,Brown
+428,Lopunny,Brown
+428,Mega Lopunny,Brown
+429,Mismagius,Purple
+430,Honchkrow,Black
+431,Glameow,Gray
+432,Purugly,Gray
+433,Chingling,Yellow
+434,Stunky,Purple
+435,Skuntank,Purple
+436,Bronzor,Green
+437,Bronzong,Green
+438,Bonsly,Brown
+439,Mime Jr.,Pink
+440,Happiny,Pink
+441,Chatot,Black
+442,Spiritomb,Purple
+443,Gible,Blue
+444,Gabite,Blue
+445,Garchomp,Blue
+445,Garchomp,Blue
+445,Mega Garchomp,Blue
+446,Munchlax,Black
+447,Riolu,Blue
+448,Mega Lucario,Blue
+448,Lucario,Blue
+448,Lucario,Blue
+449,Hippopotas,Brown
+450,Hippowdon,Brown
+451,Skorupi,Purple
+452,Drapion,Purple
+453,Croagunk,Blue
+454,Toxicroak,Blue
+455,Carnivine,Green
+456,Finneon,Blue
+457,Lumineon,Blue
+458,Mantyke,Blue
+459,Snover,White
+460,Abomasnow,White
+460,Mega Abomasnow,White
+460,Abomasnow,White
+461,Weavile,Black
+462,Magnezone,Gray
+463,Lickilicky,Pink
+464,Rhyperior,Gray
+465,Tangrowth,Blue
+466,Electivire,Yellow
+467,Magmortar,Red
+468,Togekiss,White
+469,Yanmega,Green
+470,Leafeon,Green
+471,Glaceon,Blue
+472,Gliscor,Purple
+473,Mamoswine,Brown
+474,Porygon-Z,Red
+475,Gallade,White
+475,Mega Gallade,White
+475,Gallade,White
+476,Probopass,Gray
+477,Dusknoir,Black
+478,Froslass,White
+479,Frost Rotom,Red
+479,Mow Rotom,Red
+479,Wash Rotom,Red
+479,Mow Rotom,Red
+479,Fan Rotom,Red
+479,Fan Rotom,Red
+479,Heat Rotom,Red
+479,Rotom,Red
+479,Rotom,Red
+479,Wash Rotom,Red
+479,Heat Rotom,Red
+479,Frost Rotom,Red
+479,Rotom,Red
+479,Rotom,Red
+479,Rotom,Red
+479,Rotom,Red
+480,Uxie,Yellow
+481,Mesprit,Pink
+482,Azelf,Blue
+483,Dialga Origin Form,White
+483,Dialga,White
+483,Dialga,White
+484,Palkia,Purple
+484,Palkia Origin Form,Purple
+484,Palkia,Purple
+485,Heatran,Brown
+486,Regigigas,White
+487,Giratina Altered Form,Black
+487,Giratina,Black
+487,Giratina,Black
+487,Giratina Origin Form,Black
+488,Cresselia,Yellow
+489,Phione,Blue
+490,Manaphy,Blue
+491,Darkrai,Black
+492,Shaymin,Green
+492,Shaymin Land Form,Green
+492,Shaymin Sky Form,Green
+492,Shaymin,Green
+493,Arceus,White
+494,Victini,Yellow
+495,Snivy,Green
+496,Servine,Green
+497,Serperior,Green
+498,Tepig,Red
+499,Pignite,Red
+500,Emboar,Red
+501,Oshawott,Blue
+502,Dewott,Blue
+503,Samurott,Blue
+503,Hisuian Samurott,Blue
+503,Samurott,Blue
+504,Patrat,Brown
+505,Watchog,Brown
+506,Lillipup,Brown
+507,Herdier,Gray
+508,Stoutland,Gray
+509,Purrloin,Purple
+510,Liepard,Purple
+511,Pansage,Green
+512,Simisage,Green
+513,Pansear,Red
+514,Simisear,Red
+515,Panpour,Blue
+516,Simipour,Blue
+517,Munna,Pink
+518,Musharna,Pink
+519,Pidove,Gray
+520,Tranquill,Gray
+521,Unfezant,Gray
+522,Blitzle,Black
+523,Zebstrika,Black
+524,Roggenrola,Blue
+525,Boldore,Blue
+526,Gigalith,Blue
+527,Woobat,Blue
+528,Swoobat,Blue
+529,Drilbur,Gray
+530,Excadrill,Gray
+531,Audino,Pink
+531,Mega Audino,White
+531,Audino,Pink
+532,Timburr,Gray
+533,Gurdurr,Gray
+534,Conkeldurr,Brown
+535,Tympole,Blue
+536,Palpitoad,Blue
+537,Seismitoad,Blue
+538,Throh,Red
+539,Sawk,Blue
+540,Sewaddle,Yellow
+541,Swadloon,Green
+542,Leavanny,Yellow
+543,Venipede,Red
+544,Whirlipede,Gray
+545,Scolipede,Red
+546,Cottonee,Green
+547,Whimsicott,Green
+548,Petilil,Green
+549,Hisuian Lilligant,Green
+549,Lilligant,Green
+549,Lilligant,Green
+550,Basculin,Green
+550,Basculin Blue-Striped Form,Green
+550,Basculin Red-Striped Form,Green
+550,Basculin,Green
+550,Basculin White-Striped Form,Green
+550,Basculin,Green
+551,Sandile,Brown
+552,Krokorok,Brown
+553,Krookodile,Red
+554,Darumaka,Red
+554,Darumaka,Red
+554,Galarian Darumaka,White
+555,Darmanitan Galarian Standard Mode,White
+555,Darmanitan Zen Mode,Blue
+555,Darmanitan Galarian Zen Mode,White
+556,Maractus,Green
+557,Dwebble,Red
+558,Crustle,Red
+559,Scraggy,Yellow
+560,Scrafty,Red
+561,Sigilyph,Black
+562,Yamask,Black
+562,Galarian Yamask,Black
+562,Yamask,Black
+563,Cofagrigus,Yellow
+564,Tirtouga,Blue
+565,Carracosta,Blue
+566,Archen,Yellow
+567,Archeops,Yellow
+568,Trubbish,Green
+569,Garbodor,Green
+570,Zorua,Gray
+570,Hisuian Zorua,Gray
+570,Zorua,Gray
+571,Zoroark,Gray
+571,Hisuian Zoroark,Gray
+571,Zoroark,Gray
+572,Minccino,Gray
+573,Cinccino,Gray
+574,Gothita,Purple
+575,Gothorita,Purple
+576,Gothitelle,Purple
+577,Solosis,Green
+578,Duosion,Green
+579,Reuniclus,Green
+580,Ducklett,Blue
+581,Swanna,White
+582,Vanillite,White
+583,Vanillish,White
+584,Vanilluxe,White
+585,Deerling Summer Form,Green
+585,Deerling Winter Form,Brown
+585,Deerling Autumn Form,Red
+585,Deerling Spring Form,Pink
+586,Sawsbuck,Brown
+586,Sawsbuck,Brown
+586,Sawsbuck,Brown
+586,Sawsbuck,Brown
+587,Emolga,White
+588,Karrablast,Blue
+589,Escavalier,Gray
+590,Foongus,White
+591,Amoonguss,White
+592,Frillish,White
+593,Jellicent,White
+594,Alomomola,Pink
+595,Joltik,Yellow
+596,Galvantula,Yellow
+597,Ferroseed,Gray
+598,Ferrothorn,Gray
+599,Klink,Gray
+600,Klang,Gray
+601,Klinklang,Gray
+602,Tynamo,White
+603,Eelektrik,Blue
+604,Eelektross,Blue
+605,Elgyem,Blue
+606,Beheeyem,Brown
+607,Litwick,White
+608,Lampent,Black
+609,Chandelure,Black
+610,Axew,Green
+611,Fraxure,Green
+612,Haxorus,Yellow
+613,Cubchoo,White
+614,Beartic,White
+615,Cryogonal,Blue
+616,Shelmet,Red
+617,Accelgor,Red
+618,Stunfisk,Brown
+618,Stunfisk,Brown
+618,Galarian Stunfisk,Green
+619,Mienfoo,Yellow
+620,Mienshao,Purple
+621,Druddigon,Red
+622,Golett,Green
+623,Golurk,Green
+624,Pawniard,Red
+625,Bisharp,Red
+626,Bouffalant,Brown
+627,Rufflet,White
+628,Braviary,Red
+628,Braviary,Red
+628,Hisuian Braviary,White
+629,Vullaby,Brown
+630,Mandibuzz,Brown
+631,Heatmor,Red
+632,Durant,Gray
+633,Deino,Blue
+634,Zweilous,Blue
+635,Hydreigon,Blue
+636,Larvesta,White
+637,Volcarona,White
+638,Cobalion,Blue
+639,Terrakion,Gray
+640,Virizion,Green
+641,Tornadus Incarnate Form,Green
+641,Tornadus Therian Form,Brown
+641,Tornadus,Green
+641,Tornadus,Green
+642,Thundurus Incarnate Form,Blue
+642,Thundurus,Blue
+642,Thundurus Therian Form,Blue
+642,Thundurus,Blue
+643,Reshiram,White
+644,Zekrom,Black
+645,Landorus,Brown
+645,Landorus Therian Form,Brown
+645,Landorus Incarnate Form,Brown
+645,Landorus,Brown
+646,Black Kyurem,Gray
+646,White Kyurem,Gray
+646,Kyurem,Gray
+646,Kyurem,Gray
+646,White Kyurem,Gray
+646,Kyurem,Gray
+646,Black Kyurem,Gray
+647,Keldeo Resolute Form,Yellow
+647,Keldeo,Yellow
+647,Keldeo,Yellow
+647,Keldeo Ordinary Form,Yellow
+648,Meloetta Aria Form,White
+648,Meloetta,White
+648,Meloetta,White
+648,Meloetta Pirouette Form,White
+649,Genesect,Purple
+650,Chespin,Green
+651,Quilladin,Green
+652,Chesnaught,Green
+653,Fennekin,Red
+654,Braixen,Red
+655,Delphox,Red
+656,Froakie,Blue
+657,Frogadier,Blue
+658,Ash-Greninja,Blue
+658,Greninja,Blue
+658,Greninja,Blue
+659,Bunnelby,Brown
+660,Diggersby,Brown
+661,Fletchling,Red
+662,Fletchinder,Red
+663,Talonflame,Red
+664,Scatterbug,Black
+665,Spewpa,Black
+666,Vivillon River Pattern,Brown
+666,Vivillon Marine Pattern,Blue
+666,Vivillon Elegant Pattern,Purple
+666,Vivillon Savanna Pattern,Green
+666,Vivillon Polar Pattern,Blue
+666,Vivillon Continental Pattern,Yellow
+666,Vivillon Icy Snow,White
+666,Vivillon Jungle Pattern,Green
+666,Vivillon Garden Pattern,Green
+666,Vivillon Poké Ball Pattern,Red
+666,Vivillon Sandstorm Pattern,Brown
+666,Vivillon High Plains Pattern,Brown
+666,Vivillon Meadow Pattern,Pink
+666,Vivillon Monsoon Pattern,Gray
+666,Vivillon Modern Pattern,Red
+666,Vivillon Sun Pattern,Red
+666,Vivillon Archipelago Pattern,Brown
+666,Vivillon Fancy Pattern,Pink
+666,Vivillon Ocean Pattern,Red
+666,Vivillon Tundra Pattern,Blue
+667,Litleo,Brown
+668,Pyroar,Brown
+669,Flabébé,White
+670,Floette,White
+671,Florges,White
+672,Skiddo,Brown
+673,Gogoat,Brown
+674,Pancham,White
+675,Pangoro,White
+676,Furfrou,White
+677,Espurr,Gray
+678,Meowstic Male,Blue
+678,Meowstic Female,White
+679,Honedge,Brown
+680,Doublade,Brown
+681,Aegislash Blade Form,Brown
+681,Aegislash Shield Form,Brown
+681,Aegislash,Brown
+681,Aegislash,Brown
+682,Spritzee,Pink
+683,Aromatisse,Pink
+684,Swirlix,White
+685,Slurpuff,White
+686,Inkay,Blue
+687,Malamar,Blue
+688,Binacle,Brown
+689,Barbaracle,Brown
+690,Skrelp,Brown
+691,Dragalge,Brown
+692,Clauncher,Blue
+693,Clawitzer,Blue
+694,Helioptile,Yellow
+695,Heliolisk,Yellow
+696,Tyrunt,Brown
+697,Tyrantrum,Red
+698,Amaura,Blue
+699,Aurorus,Blue
+700,Sylveon,Pink
+701,Hawlucha,Green
+702,Dedenne,Yellow
+703,Carbink,Gray
+704,Goomy,Purple
+705,Sliggoo,Purple
+705,Hisuian Sliggoo,Purple
+705,Sliggoo,Purple
+706,Goodra,Purple
+706,Hisuian Goodra,Purple
+706,Goodra,Purple
+707,Klefki,Gray
+708,Phantump,Brown
+709,Trevenant,Brown
+710,Pumpkaboo,Brown
+710,Pumpkaboo,Brown
+710,Pumpkaboo Super Size,Brown
+710,Pumpkaboo Small Size,Brown
+710,Pumpkaboo Average Size,Brown
+710,Pumpkaboo Large Size,Brown
+710,Pumpkaboo,Brown
+710,Pumpkaboo,Brown
+711,Gourgeist,Brown
+711,Gourgeist,Brown
+711,Gourgeist Super Size,Brown
+711,Gourgeist,Brown
+711,Gourgeist Small Size,Brown
+711,Gourgeist Average Size,Brown
+711,Gourgeist Large Size,Brown
+711,Gourgeist,Brown
+712,Bergmite,Blue
+713,Avalugg,Blue
+713,Avalugg,Blue
+713,Hisuian Avalugg,Blue
+714,Noibat,Purple
+715,Noivern,Purple
+716,Xerneas,Blue
+717,Yveltal,Red
+718,Zygarde Complete Form,Black
+718,Zygarde 50% Form,Green
+718,Zygarde 10% Form,Black
+719,Diancie,Pink
+719,Mega Diancie,Pink
+719,Diancie,Pink
+720,Hoopa Unbound,Purple
+720,Hoopa Confined,Purple
+720,Hoopa,Purple
+720,Hoopa,Purple
+721,Volcanion,Brown
+722,Rowlet,Brown
+723,Dartrix,Brown
+724,Decidueye,Brown
+724,Decidueye,Brown
+724,Hisuian Decidueye,Brown
+725,Litten,Red
+726,Torracat,Red
+727,Incineroar,Red
+728,Popplio,Blue
+729,Brionne,Blue
+730,Primarina,Blue
+731,Pikipek,Black
+732,Trumbeak,Black
+733,Toucannon,Black
+734,Yungoos,Brown
+735,Gumshoos,Brown
+736,Grubbin,Gray
+737,Charjabug,Green
+738,Vikavolt,Blue
+739,Crabrawler,Purple
+740,Crabominable,White
+741,Oricorio Baile Style,Red
+741,Oricorio Sensu Style,Purple
+741,Oricorio Pa'u Style,Pink
+741,Oricorio Pom-Pom Style,Yellow
+742,Cutiefly,Yellow
+743,Ribombee,Yellow
+744,Rockruff,Brown
+744,Own Tempo Rockruff,Brown
+744,Rockruff,Brown
+745,Lycanroc Midday Form,Brown
+745,Lycanroc Dusk Form,Brown
+745,Lycanroc Midnight Form,Red
+746,Wishiwashi School Form,Blue
+746,Wishiwashi,Blue
+746,Wishiwashi,Blue
+746,Wishiwashi Solo Form,Blue
+747,Mareanie,Blue
+748,Toxapex,Blue
+749,Mudbray,Brown
+750,Mudsdale,Brown
+751,Dewpider,Green
+752,Araquanid,Green
+753,Fomantis,Pink
+754,Lurantis,Pink
+755,Morelull,Purple
+756,Shiinotic,Purple
+757,Salandit,Black
+758,Salazzle,Black
+759,Stufful,Pink
+760,Bewear,Pink
+761,Bounsweet,Purple
+762,Steenee,Purple
+763,Tsareena,Purple
+764,Comfey,Green
+765,Oranguru,White
+766,Passimian,White
+767,Wimpod,Gray
+768,Golisopod,Gray
+769,Sandygast,Brown
+770,Palossand,Brown
+771,Pyukumuku,Black
+772,Type: Null,Gray
+773,Silvally,Gray
+774,Minior,Blue
+774,Minior Meteor Form,Brown
+774,Minior,Purple
+774,Minior,Blue
+774,Minior,Blue
+774,Minior,Green
+774,Minior,Yellow
+774,Minior,Red
+774,Minior Core Form,Red
+774,Minior,Red
+774,Minior,Yellow
+774,Minior,Brown
+774,Minior,Brown
+774,Minior,Purple
+774,Minior,Blue
+774,Minior,Red
+774,Minior,Green
+774,Minior,Red
+775,Komala,Blue
+776,Turtonator,Red
+777,Togedemaru,Gray
+778,Mimikyu Busted Form,Yellow
+778,Mimikyu Disguised Form,Yellow
+779,Bruxish,Pink
+780,Drampa,White
+781,Dhelmise,Green
+782,Jangmo-o,Gray
+783,Hakamo-o,Gray
+784,Kommo-o,Gray
+785,Tapu Koko,Yellow
+786,Tapu Lele,Pink
+787,Tapu Bulu,Red
+788,Tapu Fini,Purple
+789,Cosmog,Blue
+790,Cosmoem,Blue
+791,Solgaleo,White
+792,Lunala,Purple
+793,Nihilego,White
+794,Buzzwole,Red
+795,Pheromosa,White
+796,Xurkitree,Black
+797,Celesteela,Green
+798,Kartana,White
+799,Guzzlord,Black
+800,Necrozma,Black
+800,Dawn Wings Necrozma,Blue
+800,Dusk Mane Necrozma,Yellow
+800,Necrozma,Black
+800,Necrozma,Black
+800,Ultra Necrozma,Yellow
+800,Necrozma,Black
+801,Magearna,Gray
+801,Magearna Original Color,Red
+801,Magearna,Gray
+802,Marshadow,Gray
+803,Poipole,Purple
+804,Naganadel,Purple
+805,Stakataka,Gray
+806,Blacephalon,White
+807,Zeraora,Yellow
+808,Meltan,Gray
+809,Melmetal,Gray
+810,Grookey,Green
+811,Thwackey,Green
+812,Rillaboom,Green
+813,Scorbunny,White
+814,Raboot,Gray
+815,Cinderace,White
+816,Sobble,Blue
+817,Drizzile,Blue
+818,Inteleon,Blue
+819,Skwovet,Brown
+820,Greedent,Brown
+821,Rookidee,Blue
+822,Corvisquire,Blue
+823,Corviknight,Purple
+824,Blipbug,Blue
+825,Dottler,Yellow
+826,Orbeetle,Red
+827,Nickit,Brown
+828,Thievul,Brown
+829,Gossifleur,Green
+830,Eldegoss,Green
+831,Wooloo,White
+832,Dubwool,White
+833,Chewtle,Green
+834,Drednaw,Green
+835,Yamper,Yellow
+836,Boltund,Yellow
+837,Rolycoly,Black
+838,Carkol,Black
+839,Coalossal,Black
+840,Applin,Green
+841,Flapple,Green
+842,Appletun,Green
+843,Silicobra,Green
+844,Sandaconda,Green
+845,Cramorant,Blue
+846,Arrokuda,Brown
+847,Barraskewda,Brown
+848,Toxel,Purple
+849,Toxtricity Low Key Form,Purple
+849,Toxtricity,Purple
+849,Toxtricity Amped Form,Purple
+849,Toxtricity,Purple
+850,Sizzlipede,Red
+851,Centiskorch,Red
+852,Clobbopus,Brown
+853,Grapploct,Blue
+854,Sinistea,Purple
+855,Polteageist,Purple
+856,Hatenna,Pink
+857,Hattrem,Pink
+858,Hatterene,Pink
+859,Impidimp,Pink
+860,Morgrem,Pink
+861,Grimmsnarl,Purple
+862,Obstagoon,Gray
+863,Perrserker,Brown
+864,Cursola,White
+865,Sirfetch'd,White
+866,Mr. Rime,Purple
+867,Runerigus,Gray
+868,Milcery,White
+869,Alcremie Vanilla Cream,White
+869,Alcremie Ruby Swirl,Yellow
+869,Alcremie Salted Cream,White
+869,Alcremie Mint Cream,Blue
+869,Alcremie Ruby Cream,Pink
+869,Alcremie Matcha Cream,Green
+869,Alcremie Rainbow Swirl,Yellow
+869,Alcremie Lemon Cream,Yellow
+869,Alcremie Caramel Swirl,Brown
+870,Falinks,Yellow
+871,Pincurchin,Purple
+872,Snom,White
+873,Frosmoth,White
+874,Stonjourner,Gray
+875,Eiscue,Blue
+875,Eiscue,Blue
+875,Eiscue Ice Face,Blue
+875,Eiscue Noice Face,Blue
+876,Indeedee,Purple
+876,Indeedee Female,Purple
+876,Indeedee Male,Purple
+876,Indeedee,Purple
+877,Morpeko Full Belly Mode,Yellow
+877,Morpeko Hangry Mode,Purple
+878,Cufant,Yellow
+879,Copperajah,Green
+880,Dracozolt,Green
+881,Arctozolt,Blue
+882,Dracovish,Green
+883,Arctovish,Blue
+884,Duraludon,White
+885,Dreepy,Green
+886,Drakloak,Green
+887,Dragapult,Green
+888,Zacian Hero of Many Battles,Blue
+888,Zacian,Blue
+888,Zacian,Blue
+888,Zacian Crowned Sword,Blue
+889,Zamazenta,Red
+889,Zamazenta,Red
+889,Zamazenta Crowned Shield,Red
+889,Zamazenta Hero of Many Battles,Red
+890,Eternatus,Purple
+890,Eternatus,Purple
+890,Eternatus Eternamax,Purple
+891,Kubfu,Gray
+892,Urshifu,Gray
+892,Urshifu Single Strike Style,Gray
+892,Urshifu,Gray
+892,Urshifu Rapid Strike Style,Gray
+893,Dada Zarude,Black
+893,Zarude,Black
+893,Zarude,Black
+894,Regieleki,Yellow
+895,Regidrago,Green
+896,Glastrier,White
+897,Spectrier,Black
+898,Calyrex,Green
+898,Calyrex Shadow Rider,Black
+898,Calyrex Ice Rider,White
+898,Calyrex,Green
+898,Calyrex,Green
+899,Wyrdeer,Gray
+900,Kleavor,Brown
+901,Ursaluna,Brown
+902,Basculegion,Green
+902,Basculegion,Green
+902,Basculegion Female,Green
+902,Basculegion Male,Green
+903,Sneasler,Blue
+904,Overqwil,Black
+905,Enamorus,Pink
+905,Enamorus Therian Form,Pink
+905,Enamorus,Pink
+905,Enamorus Incarnate Form,Pink
+906,Sprigatito,Green
+907,Floragato,Green
+908,Meowscarada,Green
+909,Fuecoco,Red
+910,Crocalor,Red
+911,Skeledirge,Red
+912,Quaxly,White
+913,Quaxwell,Blue
+914,Quaquaval,Blue
+915,Lechonk,Gray
+916,Oinkologne Male,Gray
+916,Oinkologne Female,Brown
+917,Tarountula,White
+918,Spidops,Green
+919,Nymble,Gray
+920,Lokix,Gray
+921,Pawmi,Yellow
+922,Pawmo,Yellow
+923,Pawmot,Yellow
+924,Tandemaus,White
+925,Maushold Family of Four,White
+925,Maushold,White
+925,Maushold,White
+925,Maushold Family of Three,White
+926,Fidough,Yellow
+927,Dachsbun,Brown
+928,Smoliv,Green
+929,Dolliv,Green
+930,Arboliva,Green
+931,Squawkabilly Yellow Plumage,Yellow
+931,Squawkabilly Blue Plumage,Blue
+931,Squawkabilly Green Plumage,Green
+931,Squawkabilly White Plumage,White
+932,Nacli,Brown
+933,Naclstack,Brown
+934,Garganacl,Brown
+935,Charcadet,Red
+936,Armarouge,Red
+937,Ceruledge,Blue
+938,Tadbulb,Yellow
+939,Bellibolt,Green
+940,Wattrel,Black
+941,Kilowattrel,Yellow
+942,Maschiff,Brown
+943,Mabosstiff,Gray
+944,Shroodle,Gray
+945,Grafaiai,Gray
+946,Bramblin,Brown
+947,Brambleghast,Brown
+948,Toedscool,Yellow
+949,Toedscruel,Black
+950,Klawf,Red
+951,Capsakid,Green
+952,Scovillain,Green
+953,Rellor,Brown
+954,Rabsca,Green
+955,Flittle,Yellow
+956,Espathra,Yellow
+957,Tinkatink,Pink
+958,Tinkatuff,Pink
+959,Tinkaton,Pink
+960,Wiglett,White
+961,Wugtrio,Red
+962,Bombirdier,White
+963,Finizen,Blue
+964,Palafin,Blue
+964,Palafin,Blue
+964,Palafin Hero Form,Blue
+964,Palafin Zero Form,Blue
+965,Varoom,Gray
+966,Revavroom,Gray
+967,Cyclizar,Green
+968,Orthworm,Pink
+969,Glimmet,Blue
+970,Glimmora,Blue
+971,Greavard,White
+972,Houndstone,White
+973,Flamigo,Pink
+974,Cetoddle,White
+975,Cetitan,White
+976,Veluza,Gray
+977,Dondozo,Blue
+978,Tatsugiri Droopy Form,Red
+978,Tatsugiri Stretchy Form,Yellow
+978,Tatsugiri Curly Form,Pink
+979,Annihilape,Gray
+980,Clodsire,Brown
+981,Farigiraf,Brown
+982,Dudunsparce,Yellow
+982,Dudunsparce,Yellow
+982,Dudunsparce Two-Segment Form,Yellow
+982,Dudunsparce Three-Segment Form,Yellow
+983,Kingambit,Black
+984,Great Tusk,Purple
+985,Scream Tail,Pink
+986,Brute Bonnet,Gray
+987,Flutter Mane,Gray
+988,Slither Wing,Red
+989,Sandy Shocks,Gray
+990,Iron Treads,Gray
+991,Iron Bundle,Red
+992,Iron Hands,Gray
+993,Iron Jugulis,Blue
+994,Iron Moth,Yellow
+995,Iron Thorns,Green
+996,Frigibax,Gray
+997,Arctibax,Gray
+998,Baxcalibur,Gray
+999,Gimmighoul Roaming Form,Blue
+999,Gimmighoul Chest Form,Brown
+1000,Gholdengo,Yellow
+1001,Wo-Chien,Brown
+1002,Chien-Pao,White
+1003,Ting-Lu,Brown
+1004,Chi-Yu,Red
+1005,Roaring Moon,Green
+1006,Iron Valiant,White
+1007,Koraidon,Red
+1008,Miraidon,Blue
