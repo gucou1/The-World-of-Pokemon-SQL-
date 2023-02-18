@@ -24,9 +24,3 @@ WHERE
               `pokemonproject2023.Pokemon.pokedex`
   )
   
--- Results:
-| pokedex_number | name | total | Gen |
-| -------------- | ---- | ----- | --- |
-| 746 | Wishiwashi | 175 | VII |
-| 890 | Eternatus Eternamax | 1125 | VIII|
-  
