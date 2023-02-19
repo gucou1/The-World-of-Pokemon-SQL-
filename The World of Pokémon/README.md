@@ -2,6 +2,9 @@
 
 > In this project I delved into the fantastic world of remarkable creatures, known as Pokémon, to develop my Analytical Skills with Excel, PowerQuery and SQL. The anime sensation as accompanied me since I was very young so it's time to make Ash and Pikachu (and a bunch of other lovable characters) proud of this "good ol' fan".
 
+ <br>
+  <br>
+
 ## Table of Contents
 
 - Business Questions
@@ -9,7 +12,9 @@
 - Querying Data
 - Presenting The Final Answers
 
-
+ <br>
+ <br>
+ 
 ## Business Questions
 
 > I asked a group of friends to challenge me with questions they'd would like to be answered.
@@ -28,7 +33,9 @@
 </p>
 </details>
 
-
+ <br>
+ <br>
+  
 ## Data Gathering
 
 > To answer my friends questions I needed data (duh!). So I went on a quest for all the information I needeed. Let me show you what I did:
