@@ -55,7 +55,8 @@ evolution family <br>
 pokedex <br>
 pokedex_simple <br>
 >  Now, we will jump into SQL!
-
+ <br> 
+ <br>
 
 ## Querying Data
 
@@ -98,7 +99,7 @@ WHERE
 | -------------- | ---- | ----- | --- |
 | 746 | Wishiwashi | 175 | VII |
 | 890 | Eternatus Eternamax | 1125 | VIII|
-
+ <br>
 
 ### 2. How many types are there and how are Pokémon distributed through them?
 <details><summary>SQL Code: </summary>
@@ -169,7 +170,7 @@ Electric	| 87
 Ghost	| 86
 Steel	| 85
 Ice	| 65
-
+ <br>
 
 ### 3. How many Generations are there today and how many Pokémon do each Generation have?
 <details><summary>SQL Code: </summary>
@@ -224,7 +225,7 @@ VI	| 72
 VII	| 88
 VIII	| 96
 IX	| 103
-
+ <br>
 
 ### 4. How do Legendary Pokémon compare to Normal Pokémon?
 > For this question, I will answer with 2 tables.
@@ -304,7 +305,7 @@ Legendary	| 675.21	| 112.27	| 122.04	| 107.9	| 120.23	| 109.71	| 103.06	| 4.21	|
 Mythical	| 597.78	| 83.94	| 108.44	| 93.25	| 112.86	| 97.58	| 101.69	| 1.39	| 91.61
 Sub-Legendary	| 576.05	| 89.09	| 104.76	| 93.44	| 103.35	| 92.86	| 92.55	| 1.95	| 155.54
 Normal	| 419.54	| 67.95	| 76.58	| 71.03	| 68.6	| 68.58	| 66.8	| 1.11	| 52.72
-
+ <br>
 
 ### 5. Which Pokémon from Gen I and Ground type are more "petable"?
 > Here I will also want 2 tables to answer
@@ -390,7 +391,7 @@ ORDER BY
 105	| Marowak	| I	| Ground	| 	| 60
 111	| Rhyhorn	| I	| Ground	| Rock	| 60
 112	| Rhydon	| I	| Ground	| Rock	| 60
-
+ <br>
 
 ### 6. Which Pokémon are Purple in all their Evolutionary Stages and are Air or Water type?
 <details><summary>SQL Code: </summary>
@@ -478,7 +479,8 @@ base_pokedex	| stage1	| stage1_color	| stage1_type1	| stage1_type2	| stage2_poke
 | ----------| ---------| -| -| -| -| -| -| -| -| -| -| -| -| -| 
 41	| Zubat	| Purple	| Poison	| Flying	| 42	| Golbat	| Purple	| Poison	| Flying	| 169	| Crobat	| Purple	| Poison	| Flying
 
-
+ <br>
+ 
 ### 7. Analysis of my favorite Pokémon.
 > This one is going to have a few tables.
 Come with me and stay strong, I'm almost finished!
@@ -510,7 +512,10 @@ pokedex_number	| name	| Gen	| type_1	| type_2	| total	| hp	| attack	| defense	| 
 | -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| 
 7	| Squirtle	| I	| Water		| 314	| 44	| 48	| 65	| 50	| 64	| 43	| 0.5	| 9.0	| 360	| Normal		| 60
 54	| Psyduck	| I	| Water		| 320	| 50	| 52	| 48	| 65	| 50	| 55	| 0.8	| 19.6	| 306	| Normal		| 60
-        
+
+
+ <br>
+
 ---------------------------------------------------------------------
  What's their Evolutionary Family? Are they base stage, 2nd or 3rd?
 
@@ -543,7 +548,11 @@ base	| second_stage	| third_stage
 | -| -| -| 
 Squirtle	| Wartortle	| Blastoise
 Psyduck	| Golduck	
-        
+
+
+ <br>
+
+
 -------------------------------------------------------------------
 Are they the same color all throughout their evolutionary stages?
 
@@ -583,8 +592,11 @@ WHERE
 base	| color	| second_stage	| color_1	| third_stage	| color_2
 | -| -| -| -| -| -| 
 Squirtle	| Blue	| Wartortle	| Blue	| Blastoise	| Blue
-Psyduck	| Yellow	| Golduck	| Blue		
-        
+Psyduck	| Yellow	| Golduck	| Blue	
+
+
+ <br>
+    
 ----------------------------------------------------------------------
 How do they compare in battle stats against other Pokemon?
 
@@ -919,6 +931,7 @@ Golduck	| I	| Normal	| 500.0	| 80.0	| 82.0	| 78.0	| 95.0	| 80.0	| 85.0	| 1.7	| 7
 Blastoise	| I	| Normal	| 530.0	| 79.0	| 83.0	| 100.0	| 85.0	| 105.0	| 78.0	| 1.6	| 85.5	| 334.0
 
 
+ <br>
 
 ----------------------------------------------------------------------
 > Picking up on this last Query, I decided to try something new I had learnt recently.
@@ -1099,5 +1112,8 @@ All Gen I	| 195	| 325.0	| 440.0	| 499.5	| 640
 Gen I Base Forms	| 195	| 325.0	| 440.0	| 499.5	| 535
 All Gen Base Forms	| 175	| 325.0	| 440.0	| 499.5	| 640
 
-
+ <br>
+ <br>
+ <br>
+  
 ## Presenting The Final Answers
