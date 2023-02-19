@@ -631,3 +631,160 @@ FROM
         
 ORDER BY 
   name DESC, Gen DESC
+        
+        
+-- Picking up on this last Query, I decided to try something new I had learnt recently.
+-- I wanted to compare just the Total from these groups and try and creat a box & whiskers plot, later.
+-- Let's see how it goes
+        
+CREATE OR REPLACE TEMP TABLE class_stats AS -- Stats table with relative ranking and total count for each class
+(
+  SELECT
+    name,
+    Gen,
+    class,
+    total,
+    hp,
+    attack,
+    defense,
+    sp_atk,
+    sp_def,
+    speed,
+    ROW_NUMBER() OVER(PARTITION BY class ORDER BY total) AS series, -- relative ranking
+    SUM(1) OVER(PARTITION BY class) AS n_data_points -- finds total number of date point for each class
+  
+  FROM
+    pokemonproject2023.Pokemon.pokedex
+
+);
+
+CREATE OR REPLACE TEMP TABLE total_quartiles AS -- Table to find the values for Quartiles 1 and 3 and the Median
+(
+  SELECT
+    name,
+    Gen,
+    class,
+    total,
+    AVG(CASE
+          WHEN
+            series >= (FLOOR(n_data_points / 2) / 2)
+          AND
+            series <= (FLOOR(n_data_points / 2) / 2) +1
+            THEN
+              total / 1
+            ELSE NULL END
+        ) OVER(PARTITION BY class) AS q1_total, -- Calculations for Quartile 1, values below the median
+    AVG(CASE 
+          WHEN 
+            series >= (n_data_points / 2)
+          AND
+            series <= (n_data_points / 2) + 1
+            THEN
+              total / 1
+            ELSE NULL END  
+        ) OVER(PARTITION BY class) AS median_total, -- Calculations for the Median
+    
+    AVG(CASE
+          WHEN 
+            series >= (CEIL(n_data_points / 2) + (FLOOR(n_data_points / 2) / 2))
+          AND
+            series <= (CEIL(n_data_points / 2) + (FLOOR(n_data_points / 2) / 2) + 1)
+            THEN
+              total / 1
+            ELSE NULL END
+        ) OVER(PARTITION BY class)AS q3_total -- Calculations for Quartile 3, values above the median
+
+  FROM
+    class_stats
+);
+
+-- FINAL TABLE
+SELECT --First part, valus for Legendary, Sub- Legendary, Mythical and all Normal 
+  CASE
+    WHEN class = 'Normal'
+      THEN 'All Gen All Normal'
+    ELSE
+      class
+     END AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles
+
+GROUP BY 
+  class
+
+UNION ALL -- UNION table for All Pokemon from Gen I (excl Legendary groups)
+
+SELECT
+  'All Gen I' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles
+
+WHERE
+  Gen = 'I' 
+  AND
+  class = 'Normal'
+
+GROUP BY
+  class
+
+UNION ALL -- UNION table for Gen I Base Forms (excl Legendary groups)
+
+SELECT
+  'Gen I Base Forms' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles AS t
+  INNER JOIN
+    pokemonproject2023.Pokemon.evolution_family AS evo
+    ON
+      t.name = evo.base
+
+WHERE
+  Gen = 'I' 
+  AND
+  class = 'Normal'
+
+GROUP BY
+  class
+
+UNION ALL -- UNION table for all Generations Base Forms (excl Legendary groups)
+
+SELECT
+  'All Gen Base Forms' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles AS t
+  INNER JOIN
+    pokemonproject2023.Pokemon.evolution_family AS evo
+    ON
+      t.name = evo.base
+
+WHERE
+  class = 'Normal'
+
+GROUP BY
+  class
+
+
