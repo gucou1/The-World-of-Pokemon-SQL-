@@ -7,7 +7,7 @@
 - Business Questions
 - Data Gathering
 - Querying Data
-- Presenting the final answers
+- Presenting The Final Answers
 
 
 ## Business Questions
@@ -480,9 +480,624 @@ base_pokedex	| stage1	| stage1_color	| stage1_type1	| stage1_type2	| stage2_poke
 
 
 ### 7. Analysis of my favorite Pokémon.
-<details><summary>SQL Code: </summary>
+> This one is going to have a few tables.
+Come with me and stay strong, I'm almost finished!
+
+My favourite Pokemon are Squirtle and Psyduck-
+so I need to find them, but I can't remember their Pokedex Number
+<details><summary>SQL Code #1: </summary>
 <p>
+
+```SQL
+        
+SELECT
+  *
+        
+FROM
+  pokemonproject2023.Pokemon.pokedex
+        
+WHERE 
+  name IN ('Squirtle', 'Psyduck');
+  
+  ```
+  
   </p>
 </details>
 
-> Query 7 results:
+> Question 7, Query #1 results:
+
+pokedex_number	| name	| Gen	| type_1	| type_2	| total	| hp	| attack	| defense	| sp_atk	| sp_def	| speed	| height	| weight	| BMI	| class	| alternative_form	| base_friendship_avg
+| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| -| 
+7	| Squirtle	| I	| Water		| 314	| 44	| 48	| 65	| 50	| 64	| 43	| 0.5	| 9.0	| 360	| Normal		| 60
+54	| Psyduck	| I	| Water		| 320	| 50	| 52	| 48	| 65	| 50	| 55	| 0.8	| 19.6	| 306	| Normal		| 60
+        
+---------------------------------------------------------------------
+ What's their Evolutionary Family? Are they base stage, 2nd or 3rd?
+
+<details><summary>SQL Code #2: </summary>
+<p>
+
+ ``` SQL
+ 
+SELECT
+  base,
+  second_stage,
+  third_stage
+        
+FROM
+  pokemonproject2023.Pokemon.evolution_family
+        
+WHERE
+  base IN ('Squirtle', 'Psyduck') OR
+  second_stage IN ('Squirtle', 'Psyduck') OR
+  third_stage IN ('Squirtle', 'Psyduck');
+  
+  ```
+  
+  </p>
+</details>
+
+> Question 7, Query #2 results:
+
+base	| second_stage	| third_stage
+| -| -| -| 
+Squirtle	| Wartortle	| Blastoise
+Psyduck	| Golduck	
+        
+-------------------------------------------------------------------
+Are they the same color all throughout their evolutionary stages?
+
+<details><summary>SQL Code #3: </summary>
+<p>
+
+``` SQL
+
+SELECT
+  evo.base,
+  color_base.color,
+  evo.second_stage,
+  color_2nd.color,
+  evo.third_stage,
+  color_3rd.color
+        
+FROM
+  pokemonproject2023.Pokemon.evolution_family AS evo
+        
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_base -- joining for base form color
+  ON evo.base = color_base.name
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_2nd -- joining for second form color
+  ON evo.second_stage = color_2nd.name
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_3rd -- joining for third form color
+  ON evo.third_stage = color_3rd.name
+        
+WHERE
+  base IN ('Squirtle', 'Psyduck');
+  
+  ```
+  
+  </p>
+</details>
+
+> Question 7, Query #3 results:
+
+base	| color	| second_stage	| color_1	| third_stage	| color_2
+| -| -| -| -| -| -| 
+Squirtle	| Blue	| Wartortle	| Blue	| Blastoise	| Blue
+Psyduck	| Yellow	| Golduck	| Blue		
+        
+----------------------------------------------------------------------
+How do they compare in battle stats against other Pokemon?
+
+<details><summary>SQL Code #4: </summary>
+<p>
+
+-- Let's compare them against different groups of Pokemon
+-- First, we create a CTE for Squirtle and Psyduck's stats
+
+``` SQL
+        
+WITH squirtle_psyduck AS 
+(
+  SELECT 
+    name,
+    Gen,
+    class,
+    total,
+    hp,
+    attack,
+    defense,
+    sp_atk,
+    sp_def,
+    speed,
+    height,
+    weight,
+    BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex
+  
+WHERE
+    name IN ('Squirtle', 'Psyduck')
+  
+),
+        
+-- We want to compare these 2 against a few groups's average stats
+-- 1) All Gen I Pokemon (Excluding Legendary, Sub-Legendary, Mythical)
+-- 2) All Gen I Base Forms (Excluding Legendary, Sub-Legendary, Mythical)
+-- 3) All Generations' Base Forms (Excluding Legendary, Sub-Legendary, Mythical)
+-- 4) All Pokemon (Excluding Legendary, Sub-Legendary, Mythical)
+-- 5) Against Legendary, Sub-Legendary, Mythical
+-- 6) Finally, compare Squirtle and Psyduck's Final Evolution with the previous groups
+        
+all_Gen_I AS -- 1) All Gen I average stats
+(
+  SELECT
+    'Normal Class All Stages' AS name,
+    'I' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class = 'Normal' AND
+    Gen = 'I'
+  
+GROUP BY 
+    class
+),
+        
+base_Gen_I AS -- 2) Base forms Gen I average stats
+(
+  SELECT
+    'Normal Class Base Stage' AS name,
+    'I' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+    INNER JOIN -- Joining to compare only against base form evolution stages
+      pokemonproject2023.Pokemon.evolution_family AS evo
+      ON
+        pokedex.name = evo.base
+  
+WHERE 
+    class = 'Normal' AND
+    Gen = 'I'
+  
+GROUP BY 
+    class
+),
+        
+base_all_Gen AS -- 3) Base forms average stats for all Generations
+(
+  SELECT
+    'Normal Class Base Stage' AS name,
+    'All Generations' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+    INNER JOIN -- Joining to compare only against base form evolution stages
+      pokemonproject2023.Pokemon.evolution_family AS evo
+      ON
+        pokedex.name = evo.base
+  
+WHERE 
+    class = 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+all_normal AS -- 4) All Pokemon for 'Normal' class
+(
+  SELECT
+    'Normal Class All Stages' AS name,
+    'All Gen' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class = 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+all_legendary AS -- 5) All Legendary, Sub-Legendary, Mythical
+(
+  SELECT
+    CASE
+      WHEN class = 'Legendary'
+        THEN 'Legendary'
+      WHEN class = 'Sub-Legendary'
+        THEN 'Sub-legendary'
+          ELSE 'Mythical'
+    END AS name,
+    'All Gen' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class <> 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+final_stage_stats AS -- 6) Final Stage's Stats
+(
+  WITH base_and_final_stage AS
+  (
+    SELECT
+      base,
+      CASE -- check what's the final evolution
+        WHEN third_stage IS NOT NULL -- Third and final stage
+          THEN third_stage
+            ELSE second_stage -- Second and final stage
+      END AS final_evolution
+    
+    FROM
+      pokemonproject2023.Pokemon.evolution_family
+  )
+  
+  SELECT
+    base.base,
+    base.final_evolution,
+    pokedex.Gen,
+    pokedex.class,
+    pokedex.total,
+    pokedex.hp,
+    pokedex.attack,
+    pokedex.defense,
+    pokedex.sp_atk,
+    pokedex.sp_def,
+    pokedex.speed,
+    pokedex.height,
+    pokedex.weight,
+    pokedex.BMI
+  
+ FROM base_and_final_stage AS base
+  
+    LEFT JOIN pokemonproject2023.Pokemon.pokedex AS pokedex
+      ON
+      base.final_evolution = pokedex.name
+  
+  WHERE
+    base.base IN ('Squirtle', 'Psyduck') -- Final stages for our 2 Pokemon
+)
+
+-- Now, we Union the results for further comparison.
+-- How do Squirtle and Psyduck compare with the
+-- Previously defined groups?
+        
+SELECT
+  *
+        
+FROM
+  all_legendary -- All Legendary, Sub-Legendar and Mythical
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  all_normal -- All Normal Class Pokemon
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  base_all_Gen -- All Base Form Pokemon from all Gens
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  base_Gen_I -- All Base Form Gen I Pokemon
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  all_Gen_I -- All Gen I Pokemon
+        
+UNION ALL 
+        
+SELECT
+  *
+        
+FROM
+  squirtle_psyduck -- Squirtle and Psyduck Stats
+        
+UNION ALL
+        
+SELECT -- select only the columns to match
+  final_evolution AS name,
+  Gen,
+  class,
+  total,
+  hp,
+  attack,
+  defense,
+  sp_atk,
+  sp_def,
+  speed,
+  height,
+  weight,
+  BMI
+        
+FROM
+  final_stage_stats -- Final Stages' stats
+        
+ORDER BY 
+  name DESC, Gen DESC
+  
+  ```
+  </p>
+</details>
+
+> Question 7, Query #4 results:
+
+
+name	| Gen	| class	| total	| hp	| attack	| defense	| sp_atk	| sp_def	| speed	| height	| weight	| BMI
+| ----| ----| -----| -----| ------| -------| ----------| ----| ------| -----| ----------| ----| -----------| 
+Sub-legendary	| All Gen	| Sub-Legendary	| 576.0454545454545	| 89.090909090909037	| 104.75757575757576	| 93.439393939393938	| 103.34848484848486	| 92.863636363636374	| 92.545454545454533	| 1.9545454545454555	| 155.5424242424242	| 329.13636363636368
+Squirtle	| I	| Normal	| 314.0	| 44.0	| 48.0	| 65.0	| 50.0	| 64.0	| 43.0	| 0.5	| 9.0	| 360.0
+Psyduck	| I	| Normal	| 320.0	| 50.0	| 52.0	| 48.0	| 65.0	| 50.0	| 55.0	| 0.8	| 19.6	| 306.0
+Normal Class Base Stage	| I	| Normal	| 333.7659574468085	| 51.521276595744695	| 62.351063829787243	| 61.265957446808507	| 48.542553191489347	| 51.712765957446805	| 58.37234042553191	| 0.83723404255319156	| 26.929787234042546	| 405.10638297872339
+Normal Class Base Stage	| All Generations	| Normal	| 347.23475046210751	| 55.890942698706141	| 62.741219963031412	| 59.896487985212588	| 54.3475046210721	| 56.480591497227344	| 57.878003696857625	| 0.743438077634011	| 27.708687615526845	| 461.26432532347451
+Normal Class All Stages	| I	| Normal	| 416.74226804123725	| 63.974226804123745	| 76.195876288659818	| 70.71134020618554	| 67.030927835051543	| 67.247422680412441	| 71.58247422680418	| 1.2654639175257725	| 52.343298969072151	| 356.0876288659793
+Normal Class All Stages	| All Gen	| Normal	| 419.53874202370088	| 67.94530537830444	| 76.580674567000784	| 71.027347310847873	| 68.60437556973568	| 68.584320875114059	| 66.796718322698226	| 1.113582497721056	| 52.717228805834125	| 408.17137648131256
+Mythical	| All Gen	| Mythical	| 597.777777777778	| 83.944444444444457	| 108.44444444444444	| 93.249999999999986	| 112.8611111111111	| 97.583333333333343	| 101.69444444444443	| 1.3888888888888888	| 91.605555555555583	| 364.63888888888886
+Legendary	| All Gen	| Legendary	| 675.21153846153845	| 112.26923076923077	| 122.03846153846152	| 107.90384615384615	| 120.23076923076923	| 109.71153846153847	| 103.05769230769234	| 4.2117647058823531	| 387.66862745098041	| 19868.607843137252
+Golduck	| I	| Normal	| 500.0	| 80.0	| 82.0	| 78.0	| 95.0	| 80.0	| 85.0	| 1.7	| 76.6	| 265.0
+Blastoise	| I	| Normal	| 530.0	| 79.0	| 83.0	| 100.0	| 85.0	| 105.0	| 78.0	| 1.6	| 85.5	| 334.0
+
+
+
+----------------------------------------------------------------------
+> Picking up on this last Query, I decided to try something new I had learnt recently.
+I wanted to compare just the Total from these groups and try and creat a box & whiskers plot, later.
+Let's see how it goes
+
+
+
+<details><summary>SQL Code #5: </summary>
+<p>
+
+``` SQL
+
+CREATE OR REPLACE TEMP TABLE class_stats AS -- Stats table with relative ranking and total count for each class
+(
+  SELECT
+    name,
+    Gen,
+    class,
+    total,
+    hp,
+    attack,
+    defense,
+    sp_atk,
+    sp_def,
+    speed,
+    ROW_NUMBER() OVER(PARTITION BY class ORDER BY total) AS series, -- relative ranking
+    SUM(1) OVER(PARTITION BY class) AS n_data_points -- finds total number of date point for each class
+  
+  FROM
+    pokemonproject2023.Pokemon.pokedex
+
+);
+
+CREATE OR REPLACE TEMP TABLE total_quartiles AS -- Table to find the values for Quartiles 1 and 3 and the Median
+(
+  SELECT
+    name,
+    Gen,
+    class,
+    total,
+    AVG(CASE
+          WHEN
+            series >= (FLOOR(n_data_points / 2) / 2)
+          AND
+            series <= (FLOOR(n_data_points / 2) / 2) +1
+            THEN
+              total / 1
+            ELSE NULL END
+        ) OVER(PARTITION BY class) AS q1_total, -- Calculations for Quartile 1, values below the median
+    AVG(CASE 
+          WHEN 
+            series >= (n_data_points / 2)
+          AND
+            series <= (n_data_points / 2) + 1
+            THEN
+              total / 1
+            ELSE NULL END  
+        ) OVER(PARTITION BY class) AS median_total, -- Calculations for the Median
+    
+    AVG(CASE
+          WHEN 
+            series >= (CEIL(n_data_points / 2) + (FLOOR(n_data_points / 2) / 2))
+          AND
+            series <= (CEIL(n_data_points / 2) + (FLOOR(n_data_points / 2) / 2) + 1)
+            THEN
+              total / 1
+            ELSE NULL END
+        ) OVER(PARTITION BY class)AS q3_total -- Calculations for Quartile 3, values above the median
+
+  FROM
+    class_stats
+);
+
+-- FINAL TABLE
+SELECT --First part, valus for Legendary, Sub- Legendary, Mythical and all Normal 
+  CASE
+    WHEN class = 'Normal'
+      THEN 'All Gen All Normal'
+    ELSE
+      class
+     END AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles
+
+GROUP BY 
+  class
+
+UNION ALL -- UNION table for All Pokemon from Gen I (excl Legendary groups)
+
+SELECT
+  'All Gen I' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles
+
+WHERE
+  Gen = 'I' 
+  AND
+  class = 'Normal'
+
+GROUP BY
+  class
+
+UNION ALL -- UNION table for Gen I Base Forms (excl Legendary groups)
+
+SELECT
+  'Gen I Base Forms' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles AS t
+  INNER JOIN
+    pokemonproject2023.Pokemon.evolution_family AS evo
+    ON
+      t.name = evo.base
+
+WHERE
+  Gen = 'I' 
+  AND
+  class = 'Normal'
+
+GROUP BY
+  class
+
+UNION ALL -- UNION table for all Generations Base Forms (excl Legendary groups)
+
+SELECT
+  'All Gen Base Forms' AS groups_stats,
+  MIN(total) AS minimum_total,
+  AVG(q1_total) AS q1,
+  AVG(median_total) AS median_total,
+  AVG(q3_total) AS q3,
+  MAX(total) AS maximum_total
+
+FROM
+  total_quartiles AS t
+  INNER JOIN
+    pokemonproject2023.Pokemon.evolution_family AS evo
+    ON
+      t.name = evo.base
+
+WHERE
+  class = 'Normal'
+
+GROUP BY
+  class
+
+```
+  </p>
+</details>
+
+> Question 7, Query #5 results:
+
+
+groups_stats	| minimum_total	| q1	| median_total	| q3	| maximum_total
+| ----------| ----------------| ----| -------------| -----| -----------| 
+All Gen All Normal	| 175	| 325.0	| 440.0| 	499.5	| 700
+Legendary	| 200	| 670.0	| 680.0	| 700.0	| 1125
+Sub-Legendary	| 385	| 570.0	| 580.0	| 580.0	| 700
+Mythical	| 300	| 600.0	| 600.0	| 600.0	| 720
+All Gen I	| 195	| 325.0	| 440.0	| 499.5	| 640
+Gen I Base Forms	| 195	| 325.0	| 440.0	| 499.5	| 535
+All Gen Base Forms	| 175	| 325.0	| 440.0	| 499.5	| 640
+
+
+## Presenting The Final Answers
