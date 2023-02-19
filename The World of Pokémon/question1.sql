@@ -266,3 +266,368 @@ WHERE 
         
 ORDER BY 
   base_pokedex ASC
+
+        
+        
+-----------------------------------------------------------------------------------------
+-- Question 7) Analysis of my favorite Pokémon.
+        
+        
+-- My favourite Pokemon are Squirtle and Psyduck-
+-- so I need to find them, but I can't remember their Pokedex Number
+        
+SELECT
+  *
+        
+FROM
+  pokemonproject2023.Pokemon.pokedex
+        
+WHERE 
+  name IN ('Squirtle', 'Psyduck');
+        
+---------------------------------------------------------------------
+-- What's their Evolutionary Family? Are they base stage, 2nd or 3rd?
+        
+SELECT
+  base,
+  second_stage,
+  third_stage
+        
+FROM
+  pokemonproject2023.Pokemon.evolution_family
+        
+WHERE
+  base IN ('Squirtle', 'Psyduck') OR
+  second_stage IN ('Squirtle', 'Psyduck') OR
+  third_stage IN ('Squirtle', 'Psyduck');
+        
+-------------------------------------------------------------------
+-- Are they the same color all throughout their evolutionary stages?
+        
+SELECT
+  evo.base,
+  color_base.color,
+  evo.second_stage,
+  color_2nd.color,
+  evo.third_stage,
+  color_3rd.color
+        
+FROM
+  pokemonproject2023.Pokemon.evolution_family AS evo
+        
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_base -- joining for base form color
+  ON evo.base = color_base.name
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_2nd -- joining for second form color
+  ON evo.second_stage = color_2nd.name
+LEFT JOIN pokemonproject2023.Pokemon.color AS color_3rd -- joining for third form color
+  ON evo.third_stage = color_3rd.name
+        
+WHERE
+  base IN ('Squirtle', 'Psyduck');
+        
+----------------------------------------------------------------------
+-- How do they compare in battle stats against other Pokemon?
+-- Let's compare them against different groups of Pokemon
+-- First, we create a CTE for Squirtle and Psyduck's stats
+        
+        
+WITH squirtle_psyduck AS 
+(
+  SELECT 
+    name,
+    Gen,
+    class,
+    total,
+    hp,
+    attack,
+    defense,
+    sp_atk,
+    sp_def,
+    speed,
+    height,
+    weight,
+    BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex
+  
+WHERE
+    name IN ('Squirtle', 'Psyduck')
+  
+),
+        
+-- We want to compare these 2 against a few groups's average stats
+-- 1) All Gen I Pokemon (Excluding Legendary, Sub-Legendary, Mythical)
+-- 2) All Gen I Base Forms (Excluding Legendary, Sub-Legendary, Mythical)
+-- 3) All Generations' Base Forms (Excluding Legendary, Sub-Legendary, Mythical)
+-- 4) All Pokemon (Excluding Legendary, Sub-Legendary, Mythical)
+-- 5) Against Legendary, Sub-Legendary, Mythical
+-- 6) Finally, compare Squirtle and Psyduck's Final Evolution with the previous groups
+        
+all_Gen_I AS -- 1) All Gen I average stats
+(
+  SELECT
+    'Normal Class All Stages' AS name,
+    'I' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class = 'Normal' AND
+    Gen = 'I'
+  
+GROUP BY 
+    class
+),
+        
+base_Gen_I AS -- 2) Base forms Gen I average stats
+(
+  SELECT
+    'Normal Class Base Stage' AS name,
+    'I' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+    INNER JOIN -- Joining to compare only against base form evolution stages
+      pokemonproject2023.Pokemon.evolution_family AS evo
+      ON
+        pokedex.name = evo.base
+  
+WHERE 
+    class = 'Normal' AND
+    Gen = 'I'
+  
+GROUP BY 
+    class
+),
+        
+base_all_Gen AS -- 3) Base forms average stats for all Generations
+(
+  SELECT
+    'Normal Class Base Stage' AS name,
+    'All Generations' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+    INNER JOIN -- Joining to compare only against base form evolution stages
+      pokemonproject2023.Pokemon.evolution_family AS evo
+      ON
+        pokedex.name = evo.base
+  
+WHERE 
+    class = 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+all_normal AS -- 4) All Pokemon for 'Normal' class
+(
+  SELECT
+    'Normal Class All Stages' AS name,
+    'All Gen' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class = 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+all_legendary AS -- 5) All Legendary, Sub-Legendary, Mythical
+(
+  SELECT
+    CASE
+      WHEN class = 'Legendary'
+        THEN 'Legendary'
+      WHEN class = 'Sub-Legendary'
+        THEN 'Sub-legendary'
+          ELSE 'Mythical'
+    END AS name,
+    'All Gen' AS Gen,
+    class,
+    AVG(total) AS total,
+    AVG(hp) AS hp,
+    AVG(attack) AS attack,
+    AVG(defense) AS defense,
+    AVG(sp_atk) AS sp_atk,
+    AVG(sp_def) AS sp_def,
+    AVG(speed) AS speed,
+    AVG(height) AS height,
+    AVG(weight) AS weight,
+    AVG(BMI) AS BMI
+  
+FROM
+    pokemonproject2023.Pokemon.pokedex AS pokedex
+  
+WHERE 
+    class <> 'Normal'
+  
+GROUP BY 
+    class
+),
+        
+final_stage_stats AS -- 6) Final Stage's Stats
+(
+  WITH base_and_final_stage AS
+  (
+    SELECT
+      base,
+      CASE -- check what's the final evolution
+        WHEN third_stage IS NOT NULL -- Third and final stage
+          THEN third_stage
+            ELSE second_stage -- Second and final stage
+      END AS final_evolution
+    
+    FROM
+      pokemonproject2023.Pokemon.evolution_family
+  )
+  
+  SELECT
+    base.base,
+    base.final_evolution,
+    pokedex.Gen,
+    pokedex.class,
+    pokedex.total,
+    pokedex.hp,
+    pokedex.attack,
+    pokedex.defense,
+    pokedex.sp_atk,
+    pokedex.sp_def,
+    pokedex.speed,
+    pokedex.height,
+    pokedex.weight,
+    pokedex.BMI
+  
+ FROM base_and_final_stage AS base
+  
+    LEFT JOIN pokemonproject2023.Pokemon.pokedex AS pokedex
+      ON
+      base.final_evolution = pokedex.name
+  
+  WHERE
+    base.base IN ('Squirtle', 'Psyduck') -- Final stages for our 2 Pokemon
+)
+
+-- Now, we Union the results for further comparison.
+-- How do Squirtle and Psyduck compare with the
+-- Previously defined groups?
+        
+SELECT
+  *
+        
+FROM
+  all_legendary -- All Legendary, Sub-Legendar and Mythical
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  all_normal -- All Normal Class Pokemon
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  base_all_Gen -- All Base Form Pokemon from all Gens
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  base_Gen_I -- All Base Form Gen I Pokemon
+        
+UNION ALL
+        
+SELECT
+  *
+        
+FROM
+  all_Gen_I -- All Gen I Pokemon
+        
+UNION ALL 
+        
+SELECT
+  *
+        
+FROM
+  squirtle_psyduck -- Squirtle and Psyduck Stats
+        
+UNION ALL
+        
+SELECT -- select only the columns to match
+  final_evolution AS name,
+  Gen,
+  class,
+  total,
+  hp,
+  attack,
+  defense,
+  sp_atk,
+  sp_def,
+  speed,
+  height,
+  weight,
+  BMI
+        
+FROM
+  final_stage_stats -- Final Stages' stats
+        
+ORDER BY 
+  name DESC, Gen DESC
