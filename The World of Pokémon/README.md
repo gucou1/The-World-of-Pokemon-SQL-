@@ -1125,5 +1125,5 @@ All Gen Base Forms	| 175	| 325.0	| 440.0	| 499.5	| 640
   
 ## Presenting The Final Answers
  
- ![image](https://user-images.githubusercontent.com/11091531/220209754-a97292a9-0a4f-4f50-96c4-9e8b51d33ffc.png)
+
 
