@@ -22,7 +22,7 @@
 <details><summary> Final Questions: </summary>
 <p>
 
-1. Which Pokémon Has the highest total points? And the lowest?
+1. Which Pokémon has the highest total points? And the lowest?
   2. How many types are there and how are Pokémon distributed through them?
   3. How many Generations are there today and how many Pokémon do each Generation have?
   4. How do Legendary Pokémon compare to Normal Pokémon?
@@ -67,7 +67,7 @@ pokedex_simple <br>
 
 ## Querying Data
 
-### 1. Which Pokémon Has the highest total points? And the lowest?
+### 1. Which Pokémon has the highest total points? And the lowest?
 <details><summary>SQL Code: </summary>
 <p>
 
@@ -1125,5 +1125,95 @@ All Gen Base Forms	| 175	| 325.0	| 440.0	| 499.5	| 640
   
 ## Presenting The Final Answers
  
+<details><summary> Questions 1, 2 and 3: </summary>
+<p>
+
+1. Which Pokémon has the highest total points? And the lowest? <br>
+>Q1: Gen VII Wishiwashi is the lowest total scoring Pokémon, making him the weakest today.  <br>
+ Eternatus Eternamax, a mysterious alien species is the strongest with an absurd total of 1125! It was first introduced in Gen VIII <br><br>
+ 
+2. How many types are there and how are Pokémon distributed through them? <br>
+>Q2: There are 18 unique Pokémon Types. 176 Pokémon are Water-type, the most common. Only 65 are Ice-type, making it these the hardest to find. Several Pokémon have 2 types!<br><br>
+ 
+3. How many Generations are there today and how many Pokémon do each Generation have? <br>
+>Q3: We can now see how our current 1008 Pokémon are distributed through the 9 Generations. Do you still remember the original 151?<br>
+ The first Generation introduced the second most Pokémon. Gen V topped that with 156 new species!<br><br>
+ 
+![image](https://user-images.githubusercontent.com/11091531/220209977-6749b226-cfee-4a3d-948d-e6c846de9d85.png)
 
 
+</p>
+</details> <br><br>
+ 
+ <details><summary> Questions 4: </summary>
+<p>
+
+4. How do Legendary Pokémon compare to Normal Pokémon? <br>
+>Q4: Here we can find that Legendary Pokémon are divided into 3 classes (or sub-categories): Legendary, Sub-Legendary, Mythical. <br>
+ Pokémon that are not part of any of these classes, belong to the Normal class. <br>
+ How many Pokémon does each Legendary class have? Are they stronger than Normal class Pokémon?<br>
+ 
+ >We can see in our pie chart that we have only 22 Mythical Pokémon, the rarest kind. Sub-Legendary are over 50 different species and Legendary, solid 26. <br>
+ Without surprise, Legendary Pókemon are the strongest type! There isn't much of a difference between Mythical and Sub-Legendary but the first class has an advantage.<br> The Normal class is clearly weaker in average. The gap in between Normal and Legendary is almost 200 Total Points!
+ 
+![image](https://user-images.githubusercontent.com/11091531/220212709-2798a543-0768-4c24-a08e-8c679c69587a.png)
+
+
+</p>
+</details> <br><br>
+ 
+ 
+ <details><summary> Questions 5: </summary>
+<p>
+
+5. Which Pokémon from Gen I and Ground type are more "petable"? <br>
+>Q5: Considering we found out that there are Pokémon who are not very friendly - 0 base friendship! - I'm happy that the Gen I Ground-type Pokémon are all striking 60, which is a little bit above the average (55,04). <br>
+ That being said, I don't think I'd try and pet a Rhyhorn... Maybe a Cubone, but hoping there's not a Marowak near by! <br>
+ Would you pet any of these Pokémon?
+ 
+ 
+![image](https://user-images.githubusercontent.com/11091531/220214123-af06c48a-b265-4bde-b9b0-3626e16649fb.png)
+
+
+</p>
+</details> <br><br>
+ 
+  <details><summary> Questions 6: </summary>
+<p>
+
+6. Which Pokémon are Purple in all their Evolutionary Stages and are Air or Water type? <br>
+>Q6: Even though this was a challenging query, the results aren't big. In fact, we can see that only 1 Pokémon is Purple in all it's Evolutionary Stages, while also being Water-type or Air-Type. The Zubat Family. <br>
+(I still have nightmares with the Zubat Cave...) <br>
+ 
+ 
+![image](https://user-images.githubusercontent.com/11091531/220214306-5083146f-8401-4562-a546-f870a6bdd223.png)
+
+
+</p>
+</details> <br><br>
+ 
+ 
+ <details><summary> Questions 7: </summary>
+<p>
+
+7. Analysis of my Favorite Pokémon <br>
+>Q6: Squirtle and Psyduck are my favorite Pokémon. They're both from Gen I, Water-Type and in their base form. <br>
+ Psyduck, a Yellow Pokémon, can evolve once. It's final form is Golduck, a Blue colored Pokémon.
+ Squirtle can evolve twice. It's second stage form is Wartotle and third stage is Blastoise. All 3 are Blue. <br><br>
+ Analysing the results for Query #4, Squirtle and Psyduck are below average in Total Points against all the other groupings explored. In some stats, they surpass the average for the "Normal Class Base Stage Gen I" and "Normal Class Base Stage All Generations" (Defense and Special Defense, for Squirtle. Special Attack, for Psyduck) <Br>Once they get to their Final Stage, their Total Points strike well above the other groupings averages, but still not reaching the Lengendary Classes. It's actually pretty impressive how strong they become!<br>
+ Picking up on Query #5, we can understand that both Squirtle and Psyduck stand on the low end of the box plots, below the median - not great. <br>
+ But then, Golduck and Blastoise walk peacefully above the median of all grouping (except, of course, the 3 Legendary Classes). <br><br>
+ How about you? Do you have any favorite Pokémon? Let me know! <br><br>
+ 
+ 
+![image](https://user-images.githubusercontent.com/11091531/220216815-7b91353e-489d-441a-9811-a5f6651e2d49.png)
+
+
+</p>
+</details> <br><br>
+
+## Conclusion
+ 
+ Thank you for taking the time to explore this project. It's my first (published) project and even though it's a bit large I had an amazing time elaborating this. It's main purpose was to help practice SQL, Excel, Visualization, Presentation skills (the whole show) while having fun at the same time. I'd say it was a huge success! <br>
+ Can't wait to get my hands on the next project. <br><br>
+ I'll see you then!
